@@ -1,4 +1,6 @@
-import com.xz.bean.User;
+import com.alibaba.fastjson.JSON;
+import com.xz.config.AppConfig;
+import com.xz.interfaces.FriendsService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -8,12 +10,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Main {
     public static void main(String[] args) {
-        //AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext(AppConfig.class);
 
-        AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext();
-        annotationConfigApplicationContext.register(User.class);
-        annotationConfigApplicationContext.refresh();
+        AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext(AppConfig.class);
+        //annotationConfigApplicationContext.register(User.class);
+        //annotationConfigApplicationContext.refresh();
 
-        System.out.println(annotationConfigApplicationContext.getBean(User.class));
+        System.out.println("student:"+annotationConfigApplicationContext.getBean("aaa"));
+        System.out.println("student:"+annotationConfigApplicationContext.getBean("&aaa"));
+
+
+        System.out.println(JSON.toJSONString(annotationConfigApplicationContext.getBean(FriendsService.class).getFriendById(2)));
     }
 }
