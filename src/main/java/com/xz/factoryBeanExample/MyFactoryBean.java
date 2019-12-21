@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @date 2019/12/18 9:46
  **/
 
-@Component("aaa")
+@Component("bbb")
 public class MyFactoryBean implements FactoryBean<Student> {
 
     public Student getObject() throws Exception {
