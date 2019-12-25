@@ -10,6 +10,7 @@ public class Student {
     private String name;
     private String grade;
 
+    private Friend friend;
     public String getName() {
         return name;
     }
@@ -24,5 +25,13 @@ public class Student {
 
     public void setGrade(String grade) {
         this.grade = grade;
+    }
+
+    public Friend getFriend() {
+        return friend;
+    }
+
+    public void setFriend(Friend friend) {
+        this.friend = friend;
     }
 }
