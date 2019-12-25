@@ -17,7 +17,7 @@ public class CustomTest {
 
         System.out.println("friendFactoryBean:"+JSON.toJSONString(annotationConfigApplicationContext.getBean("&ccc")));
 
-/*        FriendsServiceCustom bean = annotationConfigApplicationContext.getBean(FriendsServiceCustom.class);
-        System.out.println("result:"+ JSON.toJSONString(bean.getFriendById(3)));*/
+        FriendsServiceCustom bean = annotationConfigApplicationContext.getBean(FriendsServiceCustom.class);
+        System.out.println("result:"+ JSON.toJSONString(bean.getFriendById(3)));
     }
 }

@@ -16,7 +16,7 @@ public class Main {
         //annotationConfigApplicationContext.refresh();
 
         System.out.println("student:"+annotationConfigApplicationContext.getBean("bbb"));
-        System.out.println("student:"+annotationConfigApplicationContext.getBean("&bbb"));
+        System.out.println("MyFactoryBean:"+JSON.toJSONString(annotationConfigApplicationContext.getBean("&bbb")));
 
 
         System.out.println(JSON.toJSONString(annotationConfigApplicationContext.getBean(FriendsService.class).getFriendById(2)));
