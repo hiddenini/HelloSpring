@@ -13,6 +13,8 @@ public class Main {
 
         //dev分支第一次提交
 
+        //dev分支第二次提交
+
         AnnotationConfigApplicationContext annotationConfigApplicationContext=new AnnotationConfigApplicationContext(AppConfig.class);
         //annotationConfigApplicationContext.register(User.class);
         //annotationConfigApplicationContext.refresh();
