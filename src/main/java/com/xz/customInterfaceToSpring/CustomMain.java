@@ -1,6 +1,5 @@
-package com.xz.customIntefaceToSpring;
+package com.xz.customInterfaceToSpring;
 
-import com.xz.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

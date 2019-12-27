@@ -1,4 +1,4 @@
-package com.xz.customIntefaceToSpring;
+package com.xz.customInterfaceToSpring;
 
 import java.util.List;
 

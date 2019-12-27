@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 //@Configuration
-public class MyConguration {
+public class MyConfiguration {
 
     @Bean
     public Student student(){
