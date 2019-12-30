@@ -15,7 +15,7 @@ import java.lang.reflect.Proxy;
 public class FriendFactoryBean implements FactoryBean, InvocationHandler {
     public Object getObject() throws Exception {
         Object proxy = Proxy.newProxyInstance(this.getClass().getClassLoader(), new Class[]{FriendsDaoCustom.class,}, this);
-        System.out.println("是否是FriendsDaoCustom的实现:"+(proxy instanceof  FriendsDaoCustom));
+        //System.out.println("是否是FriendsDaoCustom的实现:"+(proxy instanceof  FriendsDaoCustom));
         return proxy;
         //return new Zjw();
     }

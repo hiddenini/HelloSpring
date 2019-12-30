@@ -15,9 +15,9 @@ public class MyImportSelector implements ImportSelector {
 
        String value= (String) importingClassMetadata.getAnnotationAttributes(EnableService.class.getName()).get("value");
 
-        System.out.println(value);
+        //System.out.println(value);
 
-        System.out.println(importingClassMetadata.getAnnotationAttributes("com.xz.ImportSelectorExample.EnableService"));
+        //System.out.println(importingClassMetadata.getAnnotationAttributes("com.xz.ImportSelectorExample.EnableService"));
 
         //如果注解的值是NOT,那么不注入SelectorService
         if("NOT".equals(value)){

@@ -20,7 +20,10 @@ public class Main {
         System.out.println("student:"+annotationConfigApplicationContext.getBean("bbb"));
         System.out.println("MyFactoryBean:"+JSON.toJSONString(annotationConfigApplicationContext.getBean("&bbb")));
 
-
+        /**
+         * mybatis-spring   (MapperProxy)MapperProxy.invoke--->(MapperMethod)mapperMethod.execute--->(MapperMethod)sqlSession.selectOne--->(SqlSessionTemplate)this.sqlSessionProxy.selectOne--->SqlSessionTemplate)sqlSessionTemplate.invoke(finally closeSqlSession)
+         *
+         */
         System.out.println(JSON.toJSONString(annotationConfigApplicationContext.getBean(FriendsService.class).getFriendById(2)));
     }
 }
