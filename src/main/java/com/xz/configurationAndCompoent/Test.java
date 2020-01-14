@@ -1,4 +1,4 @@
-package com.xz.ConfigurationAndCompoent;
+package com.xz.configurationAndCompoent;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -31,7 +31,23 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  *
  *  this.componentScanParser.parse  scanner.doScan      ClassPathBeanDefinitionScanner.doScan       (也就是@Component注解中的 * @see org.springframework.context.annotation.ClassPathBeanDefinitionScanner)
  *
- *  findCandidateComponents(找到所有的component),    registerBeanDefinition(definitionHolder, this.registry) 将bean注入到spring容器
+ *  findCandidateComponents(找到所有的component),    return scanCandidateComponents(basePackage);
+ *
+ *  scanCandidateComponents遍历该包(com.xz.configurationAndCompoent)下面的所有class
+ *
+ *  MetadataReader metadataReader = getMetadataReaderFactory().getMetadataReader(resource);   通过AMS读取元信息
+ *
+ *  isCandidateComponent(metadataReader) 判断上面拿到的元数据是否符合容器定义的注解的过滤规则
+ *
+ *  符合规则的candidates返回
+ *
+ *  在ClassPathBeanDefinitionScanner.doScan 方法中遍历这些candidates    注入到spring容器
+ *
+ *  ScannedGenericBeanDefinition sbd = new ScannedGenericBeanDefinition(metadataReader);
+ *
+ *  registerBeanDefinition(definitionHolder, this.registry) 将bean注入到spring容器
+ *
+ *
  */
 public class Test {
     public static void main(String[] args) {

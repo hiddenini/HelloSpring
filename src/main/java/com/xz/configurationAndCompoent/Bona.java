@@ -1,4 +1,4 @@
-package com.xz.ConfigurationAndCompoent;
+package com.xz.configurationAndCompoent;
 
 import org.springframework.stereotype.Component;
 

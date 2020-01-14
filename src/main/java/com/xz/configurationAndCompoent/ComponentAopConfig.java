@@ -1,4 +1,4 @@
-package com.xz.ConfigurationAndCompoent;
+package com.xz.configurationAndCompoent;
 
 import org.springframework.context.annotation.ComponentScan;
 
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2020/1/3 13:58
  **/
 //@Configuration
-@ComponentScan("com.xz.ConfigurationAndCompoent")
+@ComponentScan("com.xz.configurationAndCompoent")
 public class ComponentAopConfig {
 
 }

@@ -1,4 +1,4 @@
-package com.xz.ConfigurationAndCompoent;
+package com.xz.configurationAndCompoent;
 
 import com.xz.bean.Friend;
 import com.xz.bean.Student;
