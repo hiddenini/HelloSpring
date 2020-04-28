@@ -1,5 +1,6 @@
 import com.alibaba.fastjson.JSON;
 import com.xz.config.AppConfig;
+import com.xz.factoryBeanExample.service.AnimalService;
 import com.xz.interfaces.FriendsService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -17,8 +18,11 @@ public class Main {
         //annotationConfigApplicationContext.register(User.class);
         //annotationConfigApplicationContext.refresh();
 
-        System.out.println("student:"+annotationConfigApplicationContext.getBean("bbb"));
-        System.out.println("MyFactoryBean:"+JSON.toJSONString(annotationConfigApplicationContext.getBean("&bbb")));
+        System.out.println("CatService:"+annotationConfigApplicationContext.getBean("bbb"));
+        System.out.println("AnimalFactoryBean:"+JSON.toJSONString(annotationConfigApplicationContext.getBean("&bbb")));
+        AnimalService cat = annotationConfigApplicationContext.getBean(AnimalService.class);
+        System.out.println("CatService==="+cat);
+        cat.say();
 
         /**
          * mybatis-spring   (MapperProxy)MapperProxy.invoke--->(MapperMethod)mapperMethod.execute--->(MapperMethod)sqlSession.selectOne--->(SqlSessionTemplate)this.sqlSessionProxy.selectOne--->SqlSessionTemplate)sqlSessionTemplate.invoke(finally closeSqlSession)
